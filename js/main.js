@@ -318,3 +318,40 @@ $(document).ready(function () {
     });
 });
 /*Safe Smartfon-End*/
+
+/*Using*/
+$(document).ready(function () {
+
+     $('.first-par, .second-par, .third-par, .fourth-par, .fifth-par, .sixth-par').click(function () {
+         alert('To jest dobra praktyka działania !');
+     });
+
+    $('.seventh-par').click(function () {
+        $('.seventh-par').hide(2000);
+    });
+
+    $('.eight-par').click(function () {
+        $('.eight-par').hide(2000);
+    });
+
+    $('.ninth-par').click(function () {
+        $('.ninth-par').hide(2000);
+    });
+
+    $('.tenth-par').click(function () {
+        $('.tenth-par').hide(2000);
+    });
+
+    $('.eleventh-par').click(function () {
+        $('.eleventh-par').hide(2000);
+    });
+
+    $('.twelth-par').click(function () {
+        $('.twelth-par').hide(2000);
+    });
+
+    $('.thirteenth-par').click(function () {
+        $('.thirteenth-par').hide(2000);
+    });
+});
+/*Using end*/
