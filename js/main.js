@@ -99,13 +99,12 @@ $(document).ready(function () {
     messageIcon.click(function () {
         newMessage.hide();
         clientMessage.show();
-        verifyMessage.show();
-        exitIcon.show();
+        verifyMessage.show(2000);
+        exitIcon.show(1000);
     });
 
     exitIcon.click(function () {
         alert('Świetnie! Pamiętaj, że nigdy bank nie prześle Ci linku do weryfikacji !');
-        verifyMessage.preventDefault();
     });
 
     verifyMessage.click(function () {
@@ -113,8 +112,8 @@ $(document).ready(function () {
         verifyMessage.hide();
         exitIcon.hide();
         warningMessage.show();
+        messageIcon.hide(2000);
     });
-
 
 });
 
@@ -136,14 +135,24 @@ $(document).ready(function () {
     var fourth = $('.fourth-paragraph');
     var fifth = $('.fifth-paragraph');
 
+    first.hide();
+    second.hide();
+    third.hide();
+    fourth.hide();
+    fifth.hide();
+
+    first.show(2000);
+    second.show(2000);
+    third.show(2000);
+    fourth.show(2000);
+    fifth.show(2000);
 
     first.click(function () {
-        alert('Spróbuj jeszcze raz !');
-        showAll();
-
+        alert('Ten element jest niezbędny do uruchomienia bankowości mobilnej na urządzeniu mobilnym');
     });
 
     second.click(function () {
+        second.addClass('green-style');
         second.hide(2000);
 
     });
@@ -159,22 +168,18 @@ $(document).ready(function () {
     });
 
     fifth.click(function () {
-        /* red.addClass('make-it-red');*/
-        alert('Spróbuj jeszcze raz !');
-        showAll();
-        /*red.removeClass('make-it-red');*/
-
+         alert('Ten element jest niezbędny do uruchomienia bankowości mobilnej na urządzeniu mobilnym');
     });
 
 
-    function showAll() {
+   /* function showAll() {
         first.show(2000);
         second.show(2000);
         third.show(2000);
         fourth.show(2000);
         fifth.show(2000);
 
-    }
+    }*/
 
 });
 /*Tools End*/
@@ -322,9 +327,9 @@ $(document).ready(function () {
 /*Using*/
 $(document).ready(function () {
 
-     $('.first-par, .second-par, .third-par, .fourth-par, .fifth-par, .sixth-par').click(function () {
-         alert('To jest dobra praktyka działania !');
-     });
+    $('.first-par, .second-par, .third-par, .fourth-par, .fifth-par, .sixth-par').click(function () {
+        alert('To jest dobra praktyka działania !');
+    });
 
     $('.seventh-par').click(function () {
         $('.seventh-par').hide(2000);

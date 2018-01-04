@@ -59,7 +59,7 @@ var paragraphs = [
 ];
 
 $(document).ready(function () {
-    var speed = 600;
+    var speed = 1500;
     var $counter = $("#counter");
     var $btnQuestion = $("#button-show");
     var $btnIsDanger = $("#is-danger");
