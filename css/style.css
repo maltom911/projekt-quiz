@@ -413,11 +413,35 @@
         text-align: justify;
     }
     /*Danger Styles End*/
-
     /*Using*/
     
+    h5 {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        padding-bottom: 45px;
+    }
+    
+    #good-and-bad .show-par {
+        margin-top: 20px;
+        height: 50px;
+        border: 3px solid black;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+    }
+    
+    #good-and-bad .show-par p {
+        font-size: 16px;
+    }
+    
+    #good-and-bad .show-par p:hover {
+        color: deepskyblue;
+    }
     /*Using End*/
-
     /*Safe Smartfon Styles*/
     
     .safe-smartfon-header {
@@ -583,7 +607,6 @@
         display: inline-block;
         width: 100%;
         text-decoration: underline;
-        /* transition: all 1s;*/
         cursor: pointer;
         color: blue;
     }
