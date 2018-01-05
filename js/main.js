@@ -185,6 +185,8 @@ $(document).ready(function () {
 
 /*Safe Smartfon*/
 $(document).ready(function () {
+    var count = 0;
+    
     $('.icon-1-hidden').hide();
     $('.icon-4-hidden').hide();
     $('.icon-5-hidden').hide();
@@ -319,6 +321,13 @@ $(document).ready(function () {
 
     $('.icon-13').mouseleave(function () {
         $('.label-13').hide();
+    });
+    
+      $('.icon-1,.icon-4,.icon-5,.icon-9').click(function () {
+        count++;
+        if (count == 8) {
+           alert('Brawo ! Do bezpiecznego korzystania z bankowości mobilnej potrzebne są: Aktualizacja systemu, Bankowość mobilna - aplikacja, Antywirus oraz Skaner odcisku palca.');
+        }
     });
 });
 /*Safe Smartfon-End*/
