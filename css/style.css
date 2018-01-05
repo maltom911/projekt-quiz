@@ -371,11 +371,10 @@
     /*Form Password Strength End*/
     /*Danger Styles*/
     
-#danger .row .btn {
-    width: 280px;
-}
-
-
+    #danger .row .btn {
+        width: 280px;
+    }
+    
     #danger h3 {
         font-size: 32px;
         font-weight: 700;
@@ -427,7 +426,7 @@
         padding-bottom: 45px;
     }
     
-    #good-and-bad .show-par {
+    .good-and-bad .show-par {
         margin-top: 12px;
         height: 73px;
         border: 3px solid black;
@@ -440,8 +439,7 @@
         background-color: lightskyblue;
     }
     
-    #good-and-bad .show-par p {
-        font-size: 16px;
+    .good-and-bad .show-par p {
         font-size: 16px;
         display: inline-block;
         text-decoration: underline;
@@ -449,9 +447,31 @@
         margin: 1px;
     }
     
-    #good-and-bad .show-par p:hover {
-        color: antiquewhite;;
+    .good-and-bad .show-par p:hover {
+        color: antiquewhite;
     }
+    
+    .good-and-bad-hidden .show-pa {
+        margin-top: 12px;
+        text-align: left;
+        display: inline-block;
+        color:black;
+    }
+    
+    .good-and-bad-hidden .show-pa p {
+        font-size: 26px;
+        display: inline-block;
+        margin: 1px;
+    }
+    
+
+h6 {
+    font-size: 50px;
+    text-align:center;
+    margin-bottom: 25px;
+    color: red;
+    font-weight: 700;
+}
     /*Using End*/
     /*Safe Smartfon Styles*/
     
@@ -639,8 +659,14 @@
     .make-it-red {
         color: red;
     }
-
+    
     .green-style {
-    background-color: limegreen;
-}
+        background-color: limegreen;
+    }
+    
+    .message-tools p:first-child {
+        font-size: 40px;
+        color: red;
+        margin-top: 120px;
+    }
     /*Tools Style End*/

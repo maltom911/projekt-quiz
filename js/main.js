@@ -134,12 +134,15 @@ $(document).ready(function () {
     var third = $('.third-paragraph');
     var fourth = $('.fourth-paragraph');
     var fifth = $('.fifth-paragraph');
+    var messageTools = $('.message-tools');
+    var count = 0;
 
     first.hide();
     second.hide();
     third.hide();
     fourth.hide();
     fifth.hide();
+    messageTools.hide();
 
     first.show(2000);
     second.show(2000);
@@ -152,34 +155,30 @@ $(document).ready(function () {
     });
 
     second.click(function () {
-        second.addClass('green-style');
         second.hide(2000);
-
     });
+
 
     third.click(function () {
         third.hide(2000);
-
     });
 
     fourth.click(function () {
         fourth.hide(2000);
-
     });
 
     fifth.click(function () {
-         alert('Ten element jest niezbędny do uruchomienia bankowości mobilnej na urządzeniu mobilnym');
+        alert('Ten element jest niezbędny do uruchomienia bankowości mobilnej na urządzeniu mobilnym');
     });
 
-
-   /* function showAll() {
-        first.show(2000);
-        second.show(2000);
-        third.show(2000);
-        fourth.show(2000);
-        fifth.show(2000);
-
-    }*/
+    $('.second-paragraph, .third-paragraph, .fourth-paragraph').click(function () {
+        count++;
+        if (count == 3) {
+            $('.show-paragraphs').hide(2000);
+            $('#tools').hide(2000);
+            messageTools.show(2000);
+        }
+    });
 
 });
 /*Tools End*/
@@ -326,6 +325,9 @@ $(document).ready(function () {
 
 /*Using*/
 $(document).ready(function () {
+    var count = 0;
+    
+    $('.container-hide').hide();
 
     $('.first-par, .second-par, .third-par, .fourth-par, .fifth-par, .sixth-par').click(function () {
         alert('To jest dobra praktyka działania !');
@@ -358,5 +360,15 @@ $(document).ready(function () {
     $('.thirteenth-par').click(function () {
         $('.thirteenth-par').hide(2000);
     });
+
+
+    $('.seventh-par,.eight-par,.ninth-par,.tenth-par,.eleventh-par,.twelth-par, .thirteenth-par').click(function () {
+        count++;
+        if (count == 7) {
+            $('.using').hide();
+             $('.container-hide').show(1000);
+        }
+    });
+
 });
 /*Using end*/
