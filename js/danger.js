@@ -25,37 +25,37 @@ var paragraphs = [
         isDanger: false,
         isCorrect: false,
         object: $('.p-five')
-    }
-    // {
-    //     isDanger: true,
-    //     isCorrect: false,
-    //     object: $('.p-six')
-    // },
-    // {
-    //     isDanger: false,
-    //     isCorrect: false,
-    //     object: $('.p-seven')
-    // },
-    // {
-    //     isDanger: false,
-    //     isCorrect: false,
-    //     object: $('.p-eight')
-    // },
-    // {
-    //     isDanger: false,
-    //     isCorrect: false,
-    //     object: $('.p-nine')
-    // },
-    // {
-    //     isDanger: true,
-    //     isCorrect: false,
-    //     object: $('.p-ten')
-    // },
-    // {
-    //     isDanger: false,
-    //     isCorrect: false,
-    //     object: $('.p-eleven')
-    // }
+    },
+     {
+         isDanger: true,
+         isCorrect: false,
+         object: $('.p-six')
+     },
+     {
+         isDanger: false,
+         isCorrect: false,
+         object: $('.p-seven')
+     },
+     {
+         isDanger: false,
+         isCorrect: false,
+         object: $('.p-eight')
+     },
+     {
+         isDanger: false,
+         isCorrect: false,
+         object: $('.p-nine')
+     },
+     {
+         isDanger: true,
+         isCorrect: false,
+         object: $('.p-ten')
+     },
+     {
+         isDanger: false,
+         isCorrect: false,
+         object: $('.p-eleven')
+     }
 ];
 
 $(document).ready(function () {
@@ -83,10 +83,8 @@ $(document).ready(function () {
             enableAnswerButtons();
             disableQuestionButton();
             incrementUntil();
-
             paragraphs[getCounterValue()].object.removeClass('fail');
             paragraphs[getCounterValue()].object.removeClass('success');
-
             showQuestion(getCounterValue());
         }
     });
@@ -194,11 +192,11 @@ $(document).ready(function () {
             if (paragraphs[i].isCorrect && paragraphs[i].isDanger) {
                 numberOfCorrectAnswers++;
             }
-
         }
 
         if (numberOfCorrectAnswers >= numberOfCorrectQuestions) {
-            alert('Finish quiz!');
+             $('#main-container-danger').addClass('hide');
+ -           $('.main-container-two-danger').removeClass('hide');
         }
     }
 });
