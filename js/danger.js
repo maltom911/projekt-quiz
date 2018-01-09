@@ -25,37 +25,37 @@ var paragraphs = [
         isDanger: false,
         isCorrect: false,
         object: $('.p-five')
-    },
-    {
-        isDanger: true,
-        isCorrect: false,
-        object: $('.p-six')
-    },
-    {
-        isDanger: false,
-        isCorrect: false,
-        object: $('.p-seven')
-    },
-    {
-        isDanger: false,
-        isCorrect: false,
-        object: $('.p-eight')
-    },
-    {
-        isDanger: false,
-        isCorrect: false,
-        object: $('.p-nine')
-    },
-    {
-        isDanger: true,
-        isCorrect: false,
-        object: $('.p-ten')
-    },
-    {
-        isDanger: false,
-        isCorrect: false,
-        object: $('.p-eleven')
     }
+    // {
+    //     isDanger: true,
+    //     isCorrect: false,
+    //     object: $('.p-six')
+    // },
+    // {
+    //     isDanger: false,
+    //     isCorrect: false,
+    //     object: $('.p-seven')
+    // },
+    // {
+    //     isDanger: false,
+    //     isCorrect: false,
+    //     object: $('.p-eight')
+    // },
+    // {
+    //     isDanger: false,
+    //     isCorrect: false,
+    //     object: $('.p-nine')
+    // },
+    // {
+    //     isDanger: true,
+    //     isCorrect: false,
+    //     object: $('.p-ten')
+    // },
+    // {
+    //     isDanger: false,
+    //     isCorrect: false,
+    //     object: $('.p-eleven')
+    // }
 ];
 
 $(document).ready(function () {
@@ -98,11 +98,11 @@ $(document).ready(function () {
 
             if (paragraphs[getCounterValue()].isDanger) {
                 paragraphs[getCounterValue()].isCorrect = true;
-                paragraphs[getCounterValue()].object.addClass('success');
+                paragraphs[getCounterValue()].object.addClass('fail');
+                hideQuestion(getCounterValue());
                 ensureQuizEnd();
             } else {
                 paragraphs[getCounterValue()].isCorrect = false;
-                 paragraphs[getCounterValue()].object.addClass('fail');
                 hideQuestion(getCounterValue());
             }
         }
@@ -119,7 +119,6 @@ $(document).ready(function () {
                 hideQuestion(getCounterValue());
             } else {
                 paragraphs[getCounterValue()].isCorrect = false;
-                 paragraphs[getCounterValue()].object.addClass('fail');
                 hideQuestion(getCounterValue());
             }
         }
@@ -182,10 +181,24 @@ $(document).ready(function () {
     }
 
     function ensureQuizEnd() {
-        if ($('.animate-paragraphs:visible').length === correctAnswers) {
-            $('#main-container-danger').addClass('hide');
-            $('.main-container-two-danger').removeClass('hide');
-            
+        var numberOfCorrectAnswers = 0;
+        var numberOfCorrectQuestions = 0;
+
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs[i].isDanger) {
+                numberOfCorrectQuestions++;
+            }
+        }
+
+        for (var i = 0; i < paragraphs.length; i++) {
+            if (paragraphs[i].isCorrect && paragraphs[i].isDanger) {
+                numberOfCorrectAnswers++;
+            }
+
+        }
+
+        if (numberOfCorrectAnswers >= numberOfCorrectQuestions) {
+            alert('asd');
         }
     }
 });
