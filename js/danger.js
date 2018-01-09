@@ -174,7 +174,7 @@ $(document).ready(function () {
 
             var paragraph = paragraphs[getCounterValue()];
 
-            if (paragraph.isDanger && paragraph.isCorrect) {
+            if (paragraph.isCorrect) {
                 incrementUntil();
             }
         }
