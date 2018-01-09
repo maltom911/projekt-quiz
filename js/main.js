@@ -90,11 +90,13 @@ $(document).ready(function () {
     var messageIcon = $('.message-icon');
     var exitIcon = $('.fa-times');
     var warningMessage = $('#warning');
+    var congratsMessage = $('.congrats-message');
 
     clientMessage.hide();
     verifyMessage.hide();
     exitIcon.hide();
     warningMessage.hide();
+    congratsMessage.hide();
 
     messageIcon.click(function () {
         newMessage.hide();
@@ -104,15 +106,23 @@ $(document).ready(function () {
     });
 
     exitIcon.click(function () {
-        alert('Świetnie! Pamiętaj, że nigdy bank nie prześle Ci linku do weryfikacji !');
+        clientMessage.hide();
+        verifyMessage.hide();
+        exitIcon.hide();
+        messageIcon.hide(2000);
+        congratsMessage.show(2000);
+
+
+
     });
 
     verifyMessage.click(function () {
         clientMessage.hide();
         verifyMessage.hide();
         exitIcon.hide();
-        warningMessage.show();
-        messageIcon.hide(2000);
+        messageIcon.hide();
+        warningMessage.show(2000);
+
     });
 
 });
@@ -186,11 +196,12 @@ $(document).ready(function () {
 /*Safe Smartfon*/
 $(document).ready(function () {
     var count = 0;
-    
+    $('.smartfon-info').hide();
     $('.icon-1-hidden').hide();
     $('.icon-4-hidden').hide();
     $('.icon-5-hidden').hide();
     $('.icon-9-hidden').hide();
+    $('.icon-13').hide();
 
     /*hiding clicks*/
     $('.icon-1').click(function () {
@@ -322,11 +333,17 @@ $(document).ready(function () {
     $('.icon-13').mouseleave(function () {
         $('.label-13').hide();
     });
+
+  
     
-      $('.icon-1,.icon-4,.icon-5,.icon-9').click(function () {
+    $('.icon-1,.icon-4,.icon-5,.icon-9').click(function () {
         count++;
-        if (count == 8) {
-           alert('Brawo ! Do bezpiecznego korzystania z bankowości mobilnej potrzebne są: Aktualizacja systemu, Bankowość mobilna - aplikacja, Antywirus oraz Skaner odcisku palca.');
+        if(count ==2){
+             $('.icon-13').show();
+        }else if (count == 8) {
+            $('.main-icons-container').hide(2000);
+            $('.smartfon-info').show(2000);
+        
         }
     });
 });
@@ -335,7 +352,7 @@ $(document).ready(function () {
 /*Using*/
 $(document).ready(function () {
     var count = 0;
-    
+
     $('.container-hide').hide();
 
     $('.first-par, .second-par, .third-par, .fourth-par, .fifth-par, .sixth-par').click(function () {
@@ -374,8 +391,9 @@ $(document).ready(function () {
     $('.seventh-par,.eight-par,.ninth-par,.tenth-par,.eleventh-par,.twelth-par, .thirteenth-par').click(function () {
         count++;
         if (count == 7) {
-            $('.using').hide();
-             $('.container-hide').show(1000);
+            $('.using').hide(2000);
+            $('.container-hide').show(3000);
+            $('.congrats').show(3000);
         }
     });
 
