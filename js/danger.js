@@ -198,7 +198,7 @@ $(document).ready(function () {
         }
 
         if (numberOfCorrectAnswers >= numberOfCorrectQuestions) {
-            alert('asd');
+            alert('Finish quiz!');
         }
     }
 });
