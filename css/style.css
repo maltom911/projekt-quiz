@@ -849,4 +849,7 @@ h6 {
     .smartfon-form {
         padding-top: 6px;
     }
+    .good-and-bad .show-par p{
+        font-size: 14px;
+    }
 }
