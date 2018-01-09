@@ -102,7 +102,7 @@ $(document).ready(function () {
                 ensureQuizEnd();
             } else {
                 paragraphs[getCounterValue()].isCorrect = false;
-                paragraphs[getCounterValue()].object.addClass('fail');
+                 paragraphs[getCounterValue()].object.addClass('fail');
                 hideQuestion(getCounterValue());
             }
         }
@@ -119,7 +119,7 @@ $(document).ready(function () {
                 hideQuestion(getCounterValue());
             } else {
                 paragraphs[getCounterValue()].isCorrect = false;
-                paragraphs[getCounterValue()].object.addClass('fail');
+                 paragraphs[getCounterValue()].object.addClass('fail');
                 hideQuestion(getCounterValue());
             }
         }
