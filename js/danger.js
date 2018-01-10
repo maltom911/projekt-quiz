@@ -135,7 +135,7 @@ $(document).ready(function () {
 
     function hideQuestion(index) {
         if (index >= 0 && index < paragraphs.length) {
-            paragraphs[index].object.hide(3000);
+            paragraphs[index].object.hide(4000);
         }
     }
 
