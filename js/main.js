@@ -392,6 +392,7 @@ $(document).ready(function () {
         count++;
         if (count == 7) {
             $('.using').hide(2000);
+            $('h5').hide(2000);
             $('.container-hide').show(3000);
             $('.congrats').show(3000);
         }
